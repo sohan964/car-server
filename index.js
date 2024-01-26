@@ -19,7 +19,7 @@ app.get('/',(req, res)=>{
 
 
 //const uri = "mongodb://localhost:27017";
-const uri = "mongodb+srv://userDB2:APF2jqL5HcrcM2JF@cluster0.8v7eukl.mongodb.net/?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.8v7eukl.mongodb.net/?retryWrites=true&w=majority`;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
